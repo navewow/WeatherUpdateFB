@@ -35,7 +35,7 @@ def GetMethod():
 
     response = request.getresponse()
 
-    print (response.read())
+    #print (response.read())
     
     return str(response.read())
 
