@@ -12,15 +12,15 @@ except ImportError:
     )
     import apiai
 
-
 from flask import Flask
 from flask import request
 from flask import make_response
 
 # Flask app should start in global layout
 app = Flask(__name__)
+CLIENT_ACCESS_TOKEN = '64a9a332b5834a73b61b860b885def02'
 
-@app.route('/GetMethod', methods=['POST'])
+@app.route('/GetMethod', methods=['Get'])
 def GetMethod():
     return "Hello"
 
