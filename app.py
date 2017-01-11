@@ -749,8 +749,8 @@ def GetMethod():
     
     return str(response.read())
 
-@app.route('/webhook', methods=['POST'])
-def webhook():
+@app.route('/webhook1', methods=['POST'])
+def webhook1():
     req = request.get_json(silent=True, force=True)
 
     print("Request:")
