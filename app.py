@@ -20,9 +20,9 @@ except ImportError:
 from flask import Flask, request
 from datetime import datetime
 from flask import make_response
-import nltk
-from nltk.stem import PorterStemmer
-from nltk.tokenize import word_tokenize
+#import nltk
+#from nltk.stem import PorterStemmer
+#from nltk.tokenize import word_tokenize
 
 app = Flask(__name__)
 
@@ -683,9 +683,9 @@ def process_message(text,sender_id):
         output="Level-1-Menu"
         ps = PorterStemmer()
         words=word_tokenize(text)
-        tokens=nltk.word_tokenize(text)
-        tagged=nltk.pos_tag(tokens)
-        entities=nltk.ne_chunk(tagged)
+        tokens=""#nltk.word_tokenize(text)
+        tagged=""#nltk.pos_tag(tokens)
+        entities=""#nltk.ne_chunk(tagged)
         print words
         for w in words:
                 #print w
