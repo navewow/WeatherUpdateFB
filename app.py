@@ -23,7 +23,7 @@ CLIENT_ACCESS_TOKEN = '64a9a332b5834a73b61b860b885def02'
 
 @app.route('/GetMethod', methods=['Get'])
 def GetMethod():
-    return str(uuid.uuid4().fields[-1])[:5]
+    return str(uuid.uuid4())
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
