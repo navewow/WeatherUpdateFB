@@ -23,7 +23,21 @@ CLIENT_ACCESS_TOKEN = '64a9a332b5834a73b61b860b885def02'
 
 @app.route('/GetMethod', methods=['Get'])
 def GetMethod():
-    return str(uuid.uuid4())
+    ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
+
+    request = ai.text_request()
+
+    #request.lang = 'de'  # optional, default value equal 'en'
+
+    request.session_id = str(uuid.uuid4())
+
+    request.query = "Weather update in for Chennai today?"
+
+    response = request.getresponse()
+
+    print (response.read())
+    
+    return str(response.read())
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
